@@ -7,7 +7,7 @@ public class Collatz {
 		String printer = "";
 		if (mood.equals("v")){
 			System.out.println("1 4 2 1 (4)");
-			for (int i = 0; i < seed; i++) {
+			for (int i = 0; i < seed-1; i++) {
 				int x = i + 2;
 				int xSaver = x;
 				String checker = "";
@@ -22,7 +22,7 @@ public class Collatz {
 					counter++;
 				}				
 			}
-				System.out.println(xSaver + checker + "(" + counter + ")" );	
+				System.out.println(xSaver + checker + " (" + counter + ")" );	
 		}
 		} else {
 			System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");

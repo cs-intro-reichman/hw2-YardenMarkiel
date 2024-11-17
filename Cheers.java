@@ -5,21 +5,34 @@ public class Cheers {
                 int times = Integer.parseInt(args[1]);
                 String chant = "";
                 String anChar = "AEFHILMNORSXaefhilmnorsx";
+                String fixedS = "";
                 int checkLen = 0;
-                while (checkLen < s.length()){
+                char c =' ';
+                int x = 0;
+                while ( (x < s.length())) {// need to convert low letters to high
+                        if ((s.charAt(x) >= 'a') && (s.charAt(x) <= 'z')){
+                                c = s.charAt(x);
+                                c = (char)(c - 32); 
+                                fixedS = fixedS + c;
+                        } else{
+                                fixedS = fixedS + s.charAt(x);
+                        }
+                        x++;
+                }
+                while (checkLen < fixedS.length()){
                         int checkAn = 0;
-                        int x = 0;
+                        x = 0;
                         for (int i = 0; i < 11; i++) { //checks if we vhave special letter
-                                if(s.charAt(checkLen) == anChar.charAt(x)){
-                                        chant = chant + s.charAt(checkLen);
-                                        System.out.println("Give me an " + s.charAt(checkLen) + ": " + s.charAt(checkLen));
+                                if(fixedS.charAt(checkLen) == anChar.charAt(x)){
+                                        chant = chant + fixedS.charAt(checkLen);
+                                        System.out.println("Give me an " + fixedS.charAt(checkLen) + ": " + fixedS.charAt(checkLen));
                                         checkAn++;                           
                                 }
                                 x++;
                         }
                         if(checkAn == 0){ //if we dont have special 
-                                chant = chant + s.charAt(checkLen);
-                                System.out.println("Give me a " + s.charAt(checkLen) + ": " + s.charAt(checkLen));
+                                chant = chant + fixedS.charAt(checkLen);
+                                System.out.println("Give me a " + fixedS.charAt(checkLen) + ": " + fixedS.charAt(checkLen));
                         }
                         checkAn = 0;
                         checkLen++;
