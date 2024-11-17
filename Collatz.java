@@ -22,7 +22,8 @@ public class Collatz {
 					counter++;
 				}				
 			}
-				System.out.println(xSaver + checker + " (" + counter + ")" );	
+				System.out.println(xSaver + checker + " (" + (counter+1) + ")" );	
+				counter = 0;
 		}
 		} else {
 			System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
