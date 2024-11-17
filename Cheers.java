@@ -2,8 +2,9 @@
 public class Cheers {
         public static void main(String[] args) {
                 String s = args[0];
+                int times = Integer.parseInt(args[1]);
                 String chant = "";
-                String anChar = "AEFHILMNORSX";
+                String anChar = "AEFHILMNORSXaefhilmnorsx";
                 int checkLen = 0;
                 while (checkLen < s.length()){
                         int checkAn = 0;
@@ -24,7 +25,7 @@ public class Cheers {
                         checkLen++;
                 }
                 System.out.println("And what we got?");
-                for (int i = 0; i < 5; i++) {
+                for (int i = 0; i < times; i++) {
                         System.out.println( chant + "!!!");        
                 }
                 }
