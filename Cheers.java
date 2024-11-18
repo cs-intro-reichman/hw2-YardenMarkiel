@@ -32,7 +32,7 @@ public class Cheers {
                         }
                         if(checkAn == 0){ //if we dont have special 
                                 chant = chant + fixedS.charAt(checkLen);
-                                System.out.println("Give me a " + fixedS.charAt(checkLen) + ": " + fixedS.charAt(checkLen) + "!");
+                                System.out.println("Give me a " + fixedS.charAt(checkLen) + ":  " + fixedS.charAt(checkLen) + "!");
                         }
                         checkAn = 0;
                         checkLen++;
