@@ -9,7 +9,7 @@ public class Cheers {
                 int checkLen = 0;
                 char c =' ';
                 int x = 0;
-                while ( (x < s.length())) {// need to convert low letters to high
+                while ( (x < s.length())) {// converting a-z to A-Z
                         if ((s.charAt(x) >= 'a') && (s.charAt(x) <= 'z')){
                                 c = s.charAt(x);
                                 c = (char)(c - 32); 
@@ -32,7 +32,7 @@ public class Cheers {
                         }
                         if(checkAn == 0){ //if we dont have special 
                                 chant = chant + fixedS.charAt(checkLen);
-                                System.out.println("Give me a " + fixedS.charAt(checkLen) + ":  " + fixedS.charAt(checkLen) + "!");
+                                System.out.println("Give me a  " + fixedS.charAt(checkLen) + ": " + fixedS.charAt(checkLen) + "!");
                         }
                         checkAn = 0;
                         checkLen++;
