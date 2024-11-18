@@ -4,7 +4,7 @@ public class Cheers {
                 String s = args[0];
                 int times = Integer.parseInt(args[1]);
                 String chant = "";
-                String anChar = "AEFHILMNORSXaefhilmnorsx";
+                String anChar = "AEFHILMNORSX";
                 String fixedS = "";
                 int checkLen = 0;
                 char c =' ';
@@ -22,7 +22,7 @@ public class Cheers {
                 while (checkLen < fixedS.length()){
                         int checkAn = 0;
                         x = 0;
-                        for (int i = 0; i < 11; i++) { //checks if we vhave special letter
+                        for (int i = 0; i < 12; i++) { //checks if we vhave special letter
                                 if(fixedS.charAt(checkLen) == anChar.charAt(x)){
                                         chant = chant + fixedS.charAt(checkLen);
                                         System.out.println("Give me an " + fixedS.charAt(checkLen) + ": " + fixedS.charAt(checkLen) +"!");
